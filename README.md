@@ -2,12 +2,13 @@ programa
 {
 	funcao inicio ()
 	{
-		
+	{	
 
   real vetor[1..4] 
   real  soma, media, menorNota, maiorNota 
   inteiro i
   inteiro notas
+  {
     soma = 0
     menorNota = 10  
     maiorNota = 0   
