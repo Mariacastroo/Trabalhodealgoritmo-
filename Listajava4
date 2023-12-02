@@ -1,0 +1,39 @@
+import java.util.Random;
+
+public class VetorAleatorio {
+    public static void main(String[] args) {
+        // Criando um vetor de 30 posições
+        int[] vetor = new int[30];
+
+        // Preenchendo o vetor com números aleatórios
+        Random random = new Random();
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = random.nextInt(100);  // Números aleatórios até 99
+        }
+
+        // Calculando a soma, o menor e o maior valor
+        int soma = 0;
+        int menor = vetor[0];
+        int maior = vetor[0];
+
+        for (int i = 0; i < vetor.length; i++) {
+            soma += vetor[i];
+            if (vetor[i] < menor) {
+                menor = vetor[i];
+            }
+            if (vetor[i] > maior) {
+                maior = vetor[i];
+            }
+        }
+
+        // Exibindo os resultados
+        System.out.println("RESULTADO:");
+        System.out.println("Soma: " + soma);
+        System.out.println("Menor: " + menor);
+        System.out.println("Maior: " + maior);
+        System.out.println("Posição 0: " + vetor[0]);
+        System.out.println("Posição 9: " + vetor[9]);
+        System.out.println("Posição 19: " + vetor[19]);
+        System.out.println("Posição 29: " + vetor[29]);
+    }
+}
