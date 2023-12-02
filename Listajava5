@@ -1,0 +1,33 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class ContarNumeroNoVetor {
+    public static void main(String[] args) {
+        // Criando um vetor de 50 posições
+        int[] vetor = new int[50];
+
+        // Preenchendo o vetor com números aleatórios de 1 a 10
+        Random random = new Random();
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = random.nextInt(10) + 1;  // Números aleatórios de 1 a 10
+        }
+
+        // Solicitando um número ao usuário
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite um número de 1 a 10: ");
+        int numeroUsuario = scanner.nextInt();
+
+        // Contando quantas vezes o número aparece no vetor
+        int contador = 0;
+        for (int i = 0; i < vetor.length; i++) {
+            if (vetor[i] == numeroUsuario) {
+                contador++;
+            }
+        }
+
+        // Exibindo o resultado
+        System.out.println("O número " + numeroUsuario + " aparece no vetor " + contador + " vezes.");
+
+        scanner.close();
+    }
+}
