@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class ProductNameValidator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o nome do produto:");
+        String userInput = scanner.nextLine();
+        
+        String validatedName = validateProductName(userInput);
+        
+        if (validatedName != null) {
+            System.out.println("Nome do produto válido: " + validatedName);
+        } else {
+            System.out.println("Nome do produto inválido. Deve ter pelo menos 10 caracteres.");
+        }
+    }
+
+    public static String validateProductName(String name) {
+        if (name.length() >= 10) {
+            return name;
+        } else {
+            return null;
+        }
+    }
+}
