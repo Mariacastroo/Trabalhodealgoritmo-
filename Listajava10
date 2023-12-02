@@ -1,0 +1,34 @@
+public class TransformacaoNome {
+    public static void main(String[] args) {
+        String nome = "Ana";
+        int anoNascimento = 1990;
+
+        String nomeTransformado = transformarNome(nome, anoNascimento);
+
+        System.out.println(nomeTransformado);
+    }
+
+    // Função para transformar o nome com base no ano de nascimento
+    static String transformarNome(String nome, int anoNascimento) {
+        if (ehPrimo(anoNascimento)) {
+            // Se o ano de nascimento é primo, troque 'A' por '@' e 'E' por '!'
+            return nome.replace('A', '@').replace('E', '!');
+        } else {
+            // Se não, troque 'E' por '#' e 'O' por '*'
+            return nome.replace('E', '#').replace('O', '*');
+        }
+    }
+
+    // Função para verificar se um número é primo
+    static boolean ehPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
