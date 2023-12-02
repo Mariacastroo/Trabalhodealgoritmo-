@@ -1,0 +1,21 @@
+public class SubTexto {
+
+    public static String obterSubTexto(String texto, int valor) {
+        // Verifica se o valor está dentro dos limites do texto
+        if (valor >= 0 && valor <= texto.length()) {
+            return texto.substring(0, valor);
+        } else {
+            // Se o valor estiver fora dos limites, retorna o texto completo
+            return texto;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Exemplo de uso
+        String textoCompleto = "Este é um exemplo de texto.";
+        int valorLimite = 10;
+
+        String resultado = obterSubTexto(textoCompleto, valorLimite);
+        System.out.println(resultado);
+    }
+}
