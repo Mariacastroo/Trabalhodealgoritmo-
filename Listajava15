@@ -1,0 +1,5 @@
+public class CalculoValorAtualizado {
+    public static void main(String[] args) {
+        double valorOriginal = 1000.0;
+        double taxaJuros = 1.5;  // Taxa de juros de 1.5%
+  
