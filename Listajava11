@@ -1,0 +1,22 @@
+public class MatrizImpares {
+    public static void main(String[] args) {
+        int[][] matriz = new int[4][5];
+
+        // Preencher a matriz com os 20 primeiros números ímpares
+        int numeroImpar = 1;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = numeroImpar;
+                numeroImpar += 2;
+            }
+        }
+
+        // Exibir a matriz na tela
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
