@@ -1,0 +1,22 @@
+import java.util.Random;
+
+public class VerificarParImpar {
+    public static void main(String[] args) {
+        int[] vetor = new int[20];
+
+        // Preencher o vetor com números aleatórios
+        preencherVetorAleatorio(vetor);
+
+        // Verificar e exibir se cada número é par ou ímpar usando a função par_impar
+        for (int i = 0; i < vetor.length; i++) {
+            String resultado = par_impar(vetor[i]);
+            System.out.println("Posição " + i + ": Número " + vetor[i] + " - " + resultado);
+        }
+    }
+
+    // Função para verificar se um número é par ou ímpar
+    static String par_impar(int numero) {
+        return (numero % 2 == 0) ? "Par" : "Ímpar";
+    }
+
+    // Função para preencher o vetor
