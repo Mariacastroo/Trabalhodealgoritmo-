@@ -2,16 +2,16 @@ import java.util.Random;
 
 public class VetorAleatorio {
     public static void main(String[] args) {
-        // Criando um vetor de 30 posições
+        
         int[] vetor = new int[30];
 
-        // Preenchendo o vetor com números aleatórios
+        
         Random random = new Random();
         for (int i = 0; i < vetor.length; i++) {
             vetor[i] = random.nextInt(100);  // Números aleatórios até 99
         }
 
-        // Calculando a soma, o menor e o maior valor
+        
         int soma = 0;
         int menor = vetor[0];
         int maior = vetor[0];
@@ -26,7 +26,7 @@ public class VetorAleatorio {
             }
         }
 
-        // Exibindo os resultados
+        
         System.out.println("RESULTADO:");
         System.out.println("Soma: " + soma);
         System.out.println("Menor: " + menor);
