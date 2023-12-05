@@ -1,18 +1,18 @@
 public class VerificarNCM {
     public static void main(String[] args) {
-        String ncm = "8471.30.19";  // Exemplo de código NCM
+        String ncm = "8471.30.19";
 
         boolean relacionadoInformatica = verificarInformaticaNCM(ncm);
 
         System.out.println(relacionadoInformatica);
     }
 
-    // Função para verificar se o NCM está relacionado à informática
+    
     static boolean verificarInformaticaNCM(String ncm) {
-        // Lista fictícia de códigos NCM relacionados à informática
+        
         String[] ncmInformatica = {"8471.30", "8523.40", "8473.30", "8517.12"};
 
-        // Remova os pontos e verifique se o código NCM começa com algum da lista
+        
         ncm = ncm.replaceAll("\\.", "");
         
         for (String codigo : ncmInformatica) {
