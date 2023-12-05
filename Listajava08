@@ -8,7 +8,7 @@ public class ProcuraDescricao {
         System.out.println(resultado);
     }
 
-    // Função para verificar se a parte existe na descrição do produto
+    // Função para verificar se a parte existe na descrição do produt
     static boolean procurarParteNaDescricao(String descricao, String parte) {
         // Verifica se a parte da descrição está contida na descrição do produto
         return descricao.toLowerCase().contains(parte.toLowerCase());
